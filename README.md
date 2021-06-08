@@ -1,7 +1,7 @@
 # Empty Bot
 
-Emtpy Bot is a Discord bot template.
-By [WouterK12](https://mcpinger.wouterk12.com)
+Emtpy Bot is a Discord bot template.  
+By WouterK12, based on [MCPinger](https://mcpinger.wouterk12.com)
 
 ## Requirements
 
