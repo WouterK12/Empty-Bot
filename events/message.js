@@ -1,6 +1,5 @@
 const { client } = require("../index");
 const discord = require("discord.js");
-const utils = require("../modules/utils");
 
 client.on("message", async (message) => {
   if (message.author.bot) return;

@@ -12,8 +12,7 @@ mongoose.connect("mongodb://localhost/empty-bot", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-const connection = mongoose.connection;
-connection.once("open", function () {
+mongoose.connection.once("open", function () {
   console.log("MongoDB database connection established successfully");
 });
 
