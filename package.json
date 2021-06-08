@@ -1,0 +1,21 @@
+{
+  "name": "empty-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot template",
+  "main": "index.js",
+  "author": "WouterK12",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.12.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
