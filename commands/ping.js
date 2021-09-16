@@ -10,7 +10,7 @@ module.exports = {
 
   async execute(message, args) {
     let guild = await Guild.findOne({
-      guildID: message.guild.id,
+      guildId: message.guild.id,
     });
 
     if (!guild) {
