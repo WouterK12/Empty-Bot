@@ -1,26 +1,23 @@
 const Guild = require("../models/guild");
 const utils = require("../modules/utils");
+const { SlashCommandBuilder } = require("@discordjs/builders");
 
 module.exports = {
   name: "ping",
-  aliases: ["p"],
-  guildOnly: true,
   cooldown: 0,
-  description: "Ping, pong!",
+  data: new SlashCommandBuilder().setName("ping").setDescription("Ping, pong!"),
 
-  async execute(message, args) {
+  async execute(interaction) {
     let guild = await Guild.findOne({
-      guildId: message.guild.id,
+      guildId: interaction.guild.id,
     });
 
     if (!guild) {
-      guild = await utils.AddGuild(message);
+      guild = await utils.AddGuild(interaction);
     }
 
-    if (args.length) {
-      return message.channel.send(`Are you sure about ${args[0]}?`);
-    }
-
-    message.channel.send(`Pong!\n(${guild.name})`);
+    interaction.reply({
+      content: `Pong!\n(${guild.name})`,
+    });
   },
 };

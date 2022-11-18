@@ -1,12 +1,10 @@
-const { client } = require("../index");
+const { client } = require("../bot");
+const { ActivityType } = require("discord.js");
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
-  client.user.setActivity(process.env.PREFIX, {
-    type: "LISTENING",
+  client.user.setActivity("/help", {
+    type: ActivityType.Listening,
   });
-
-  const guilds = client.guilds.cache.size;
-  console.log(`Currently in ${guilds} guilds.`);
 });

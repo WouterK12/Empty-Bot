@@ -12,22 +12,23 @@ By WouterK12, based on [MCPinger](https://mcpinger.wouterk12.com)
 
 - `npm install`
 - `npm init`
-- Create a file called `.env` and add [your token](https://discord.com/developers) and prefix to it.
+- Create a file called `.env` and add [your bot's token and client Id](https://discord.com/developers) to it.
 
 .env
 
 ```.env
 TOKEN=YOURTOKEN
-PREFIX=em.
+CLIENTID=YOURCLIENTID
 ```
 
 ### Start
 
-- Developing: `nodemon index.js`
-- Production: `node index.js`
+- Update Application Commands: `npm run update-commands`
+- Developing: `npm run dev`
+- Production: `npm run start`
 
 ## Included commands
 
-- Help: get a list of commands
-- Ping: pong! (with MongoDB database)
-- Statistics: get the uptime and total guilds of the bot
+- /help: get a list of commands
+- /ping: pong! (with MongoDB database)
+- /statistics: get the uptime and total guilds (across all shards) of the bot
